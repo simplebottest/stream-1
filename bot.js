@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+onst Discord = require("discord.js");
 const client = new Discord.Client();
 const bot = new Discord.Client();
 const ms = require("ms");
@@ -52,7 +52,7 @@ if (message.content.startsWith('st')) {
 if (message.content.startsWith(admin + 'setavatar')) {
   client.user.setAvatar(argresult);
       message.channel.send(` Client Avatar Changed To : \` ${argresult}\` `)
-});  
-  
+}
+});
 
 client.login(process.env.BOT_TOKEN);
