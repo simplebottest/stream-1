@@ -52,6 +52,7 @@ if (message.content.startsWith('st')) {
 if (message.content.startsWith(admin + 'setavatar')) {
   client.user.setAvatar(argresult);
       message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
+
 });
   
   
