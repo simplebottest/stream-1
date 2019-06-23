@@ -36,23 +36,23 @@ client.on('message', message => {
  
   if (message.content.startsWith(admin + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(` ? Client Activity Now Is : \`Watching ${argresult} \` `)
+      message.channel.send(` :banana: Client Activity Now Is : \`Watching ${argresult} \` `)
   } else 
   if (message.content.startsWith(admin + 'ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(` ? Client Activity Now Is : \`Listening ${argresult} \` `)
+      message.channel.send(` :banana: Client Activity Now Is : \`Listening ${argresult} \` `)
   } else 
   if (message.content.startsWith(admin + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
-     message.channel.send(` ? Client Activity Now Is : \`Streaming ${argresult} \` `)
+     message.channel.send(` :banana:  Client Activity Now Is : \`Streaming ${argresult} \` `)
   }
   if (message.content.startsWith(admin + 'setname')) {
   client.user.setUsername(argresult).then
-      message.channel.send(` Client UserName Changed To : \` ${argresult}\` `)
+      message.channel.send(` :banana: Client UserName Changed To : \` ${argresult}\` `)
 } else
 if (message.content.startsWith(admin + 'setavatar')) {
   client.user.setAvatar(argresult);
-      message.channel.send(` Client Avatar Changed To : \` ${argresult}\` `)
+      message.channel.send(` :banana: Client Avatar Changed To : \` ${argresult}\` `)
 }
 });
 
