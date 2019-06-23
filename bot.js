@@ -45,6 +45,13 @@ if (message.content.startsWith('st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/youssef98123")
     message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
 }
+  if (message.content.startsWith(admin + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
+} else
+if (message.content.startsWith(admin + 'setavatar')) {
+  client.user.setAvatar(argresult);
+      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
 });
 
 client.login(process.env.BOT_TOKEN);
