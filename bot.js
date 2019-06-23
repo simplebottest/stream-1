@@ -52,8 +52,7 @@ if (message.content.startsWith('st')) {
 if (message.content.startsWith(admin + 'setavatar')) {
   client.user.setAvatar(argresult);
       message.channel.send(` Client Avatar Changed To : \` ${argresult}\` `)
-});
-  
+});  
   
 
 client.login(process.env.BOT_TOKEN);
