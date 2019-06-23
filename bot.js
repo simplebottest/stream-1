@@ -29,7 +29,6 @@ client.on('ready', () => {
 
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
 if (message.content.startsWith('play')) {
   client.user.setGame(argresult)
     message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
