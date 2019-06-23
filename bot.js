@@ -27,32 +27,24 @@ client.on('ready', () => {
   client.user.setStatus("dnd")
 });
 
-
-
-
 client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
- 
-  if (message.content.startsWith(admin + 'wt')) {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+if (message.content.startsWith('play')) {
+  client.user.setGame(argresult)
+    message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
+} else 
+  if (message.content.startsWith( 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(` :banana: Client Activity Now Is : \`Watching ${argresult} \` `)
+      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
   } else 
-  if (message.content.startsWith(admin + 'ls')) {
+  if (message.content.startsWith('lis')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(` :banana: Client Activity Now Is : \`Listening ${argresult} \` `)
+      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
   } else 
-  if (message.content.startsWith(admin + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-     message.channel.send(` :banana:  Client Activity Now Is : \`Streaming ${argresult} \` `)
-  }
-  if (message.content.startsWith(admin + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(` :banana: Client UserName Changed To : \` ${argresult}\` `)
-} else
-if (message.content.startsWith(admin + 'setavatar')) {
-  client.user.setAvatar(argresult);
-      message.channel.send(` :banana: Client Avatar Changed To : \` ${argresult}\` `)
+if (message.content.startsWith('st')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/youssef98123")
+    message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
 }
 });
 
