@@ -47,12 +47,11 @@ if (message.content.startsWith('st')) {
 }
   if (message.content.startsWith(admin + 'setname')) {
   client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
+      message.channel.send(` Client UserName Changed To : \` ${argresult}\` `)
 } else
 if (message.content.startsWith(admin + 'setavatar')) {
   client.user.setAvatar(argresult);
-      message.channel.sendMessage(`**:white_check_mark: | ${argresult}**`).then(message => {message.delete(6000)})
-
+      message.channel.send(` Client Avatar Changed To : \` ${argresult}\` `)
 });
   
   
